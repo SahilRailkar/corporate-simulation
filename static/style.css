@@ -1,0 +1,26 @@
+body {
+	font-family: 'Roboto', sans-serif;
+}
+
+.canvas-container {
+	text-align: center;
+}
+
+canvas {
+	position: relative;
+	display: block;
+	margin: 0px;
+	margin-top: 5vh;
+}
+
+.swal-height {
+	height: 50vh;
+}
+
+.swal-height-2 {
+	height: 85vh;
+}
+
+.swal-height-3 {
+	height:40vh;
+}

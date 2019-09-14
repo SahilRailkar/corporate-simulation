@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="/static/style.css">
+        <link rel="shortcut icon" href="">
+        <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css">
+		<script src="http://ajax.cdnjs.com/ajax/libs/json2/20110223/json2.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.js"></script>
+        <title>Business Simulation</title>
+	</head>
+	<body>
+		<div hidden class="sim-details">
+			<p id="ssd">{{ data.ssd }}</p>
+			<p id="emsd">{{ data.emsd }}</p>
+			<p id="ensd">{{ data.ensd }}</p>
+			<p id="u">{{ data.u }}</p>
+			<p id="w">{{ data.w }}</p>
+			<p id="sim">{{ data.sim }}</p>
+			<p id="run_id">{{ data.run_id }}</p>
+		</div>
+		<div class="canvas-container">
+			<canvas id="canvas" width="1280" height="720"></canvas>
+		</div>
+<!-- 		<div class="ui selection dropdown" id="firm-select">
+		  <input type="hidden" name="firm">
+		  <i class="dropdown icon"></i>
+		  <div class="default text">Firm</div>
+		  <div class="menu">
+		    <div class="item" data-value="1">Firm 1</div>
+		    <div class="item" data-value="2">Firm 2</div>
+		    <div class="item" data-value="3">Firm 3</div>
+		    <div class="item" data-value="4">Firm 4</div>
+		    <div class="item" data-value="5">Firm 5</div>
+		  </div>
+		</div>
+		<div class="container">
+			<h3 id="sharePrice"> Share price: – </h3>
+		</div> -->
+	</body>
+</html>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2"></script>
+<script type="module" src="/static/script.js"></script>

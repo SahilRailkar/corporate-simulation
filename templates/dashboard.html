@@ -1,0 +1,67 @@
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<center>
+    <h1>Decisions Dashboard</h1>
+
+    <table>
+        <tr>
+            <th>id</th>
+            <th>ptype</th>
+            <th>ssd</th>
+            <th>emsd</th>
+            <th>ensd</th>
+            <th>wtype</th>
+            <th>sim</th>
+            <th>x1</th>
+            <th>y1</th>
+            <th>z1</th>
+            <th>x2</th>
+            <th>y2</th>
+            <th>z2</th>
+            <th>v1</th>
+            <th>v2</th>
+            <th>prev_a</th>
+            <th>prev_b</th>
+            <th>prev_c</th>
+            <th>new_a</th>
+            <th>new_b</th>
+            <th>new_c</th>
+            <th>time</th>
+        </tr>
+    </table>
+</center>
+<script>
+    $(document).ready(function () {
+    $.getJSON('/decision_data',
+    function (json) {
+        var tr;
+        for (var i = 0; i < json.length; i++) {
+            j = json[i]
+            console.log(j)
+            tr = $('<tr/>');
+            tr.append("<td>" + j.player.toFixed(3) + "</td>");
+            tr.append("<td>" + j.playerType + "</td>");
+            tr.append("<td>" + j.numShareholderSelected + "</td>");
+            tr.append("<td>" + j.numEmployeeSelected + "</td>");
+            tr.append("<td>" + j.numEnvironmentSelected + "</td>");
+            tr.append("<td>" + j.worldType + "</td>");
+            tr.append("<td>" + j.sim + "</td>");
+            tr.append("<td>" + j.x1.toFixed(3) + "</td>");
+            tr.append("<td>" + j.y1.toFixed(3) + "</td>");
+            tr.append("<td>" + j.z1.toFixed(3) + "</td>");
+            tr.append("<td>" + j.x2.toFixed(3) + "</td>");
+            tr.append("<td>" + j.y2.toFixed(3) + "</td>");
+            tr.append("<td>" + j.z2.toFixed(3) + "</td>");
+            tr.append("<td>" + j.v1.toFixed(3) + "</td>");
+            tr.append("<td>" + j.v2.toFixed(3) + "</td>");
+            tr.append("<td>" + j.prev_a.toFixed(3) + "</td>");
+            tr.append("<td>" + j.prev_b.toFixed(3) + "</td>");
+            tr.append("<td>" + j.prev_c.toFixed(3) + "</td>");
+            tr.append("<td>" + j.new_a.toFixed(3) + "</td>");
+            tr.append("<td>" + j.new_b.toFixed(3) + "</td>");
+            tr.append("<td>" + j.new_c.toFixed(3) + "</td>");
+            tr.append("<td>" + j.time + "</td>");
+            $('table').append(tr);
+        }
+    });
+});
+</script>
